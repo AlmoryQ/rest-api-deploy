@@ -1,0 +1,30 @@
+###HOME PAGE
+GET http://localhost:1234/
+###PELICULAS TODAS
+GET http://localhost:1234/movies
+###PELICULA POR ID
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+###PELICULAS POR GENERO
+GET http://localhost:1234/movies?genre=action
+###CREAR UNA PELICULA
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title":"New Movie Test",
+    "year":2023,
+    "director":"almory rousseau",
+    "duration":2,
+    "poster":"https://s.studiobinder.com/wp-content/uploads/2017/12/Movie-Poster-Template-Dark-with-Image.jpg?x81279",
+    "genre":["Action"],
+    "rate":0
+}
+###ACTUALIZAR UNA PELICILA
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year":1900
+}
+
+
